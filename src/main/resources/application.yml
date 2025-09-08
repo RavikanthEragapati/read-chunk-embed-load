@@ -1,0 +1,26 @@
+spring:
+  threads:
+    virtual:
+      enabled: true
+  application:
+    name: read-embed-load
+
+files:
+  location: "file:/Users/ravieragapati/MyPOC/read-embed-load/src/main/resources/*.pdf"
+
+embedding:
+  base-url: "http://localhost:11434"
+  uri: "/api/embed"
+  model: "llama3.2"
+
+vector-store:
+  simple:
+    offload:
+      path: "src/main/resources/vectorstore_backup.json"
+
+
+logging:
+  level:
+    root: INFO
+
+debug: false
